@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列布局1</title>
+        <style type="text/css">
+        .wrap {height:600px;width:100%;float:left;}
+        .center{height:600px;margin:0 110px;background-color: red;}
+        .left{height:600px;width:100px;float:left;margin-left:-100%;background-color:blue;}
+        .right{height:600px;width:100px;float:left;margin-left:-100px;background-color:yellow;}
+        </style>
+</head>
+<body>
+     <div class="wrap">
+
+         <div class="center">圣杯布局的原理是margin负值法。使用圣杯布局首先需要在center元素外部包含一个div，包含div需要设置float属性使其形成一个BFC，并设置宽度，并且这个宽度要和left块的margin负值进行配合。优点是三栏相互关联，有一定的抗性。需要注意的是，布局中间部分一定要放在前面，左右顺序不限制。对于left块的margin负值一定要等于wrap的宽度          </div>
+     </div>
+     <div class="left">left</div>
+     <div class="right">right</div>
+</body>
+</html>
